@@ -8,36 +8,37 @@
         
     Title="Update_Menu" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="468" Margin="414,52,0,0" VerticalAlignment="Top" Width="570"/>
+        <DataGrid x:Name="UpdateMenuGrid"   HorizontalAlignment="Left" Height="359" Margin="414,52,0,0" VerticalAlignment="Top" Width="369" Loaded="UpdateMenuGrid_Loaded"/>
         <Label Content="Product Name :" HorizontalAlignment="Left" Margin="11,143,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-        <Label Content="Product Category :" HorizontalAlignment="Left" Margin="11,177,0,0" VerticalAlignment="Top" Height="26" Width="120"/>
-        <Label Content="Product Subcategory :" HorizontalAlignment="Left" Margin="11,211,0,0" VerticalAlignment="Top" Height="26" Width="130"/>
-        <Label Content="Product Price :" HorizontalAlignment="Left" Margin="11,245,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-        <Label Content="Product Image :" HorizontalAlignment="Left" Margin="11,279,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="147,143,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="243"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="147,243,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="243"/>
+        <Label Content="Product Description :" HorizontalAlignment="Left" Margin="12,186,0,0" VerticalAlignment="Top" Height="26" Width="118"/>
+        <Label Content="Product Category :" HorizontalAlignment="Left" Margin="12,217,0,0" VerticalAlignment="Top" Height="26" Width="120"/>
+        <Label Content="Product Subcategory :" HorizontalAlignment="Left" Margin="11,250,0,0" VerticalAlignment="Top" Height="26" Width="130"/>
+        <Label Content="Product Price :" HorizontalAlignment="Left" Margin="11,284,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
+        <Label Content="Product Image :" HorizontalAlignment="Left" Margin="11,318,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
+        <TextBox x:Name="productNameText" HorizontalAlignment="Left" Height="26" Margin="147,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
+        <TextBox  x:Name="productPriceText"   HorizontalAlignment="Left" Height="26" Margin="147,282,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243"/>
         <TextBox HorizontalAlignment="Left" Height="29" Margin="132,16,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.969,0.261"/>
         <Label Content="Search Product : " HorizontalAlignment="Left" Height="29" Margin="4,16,0,0" VerticalAlignment="Top" Width="128"/>
         <Button Content="Previous Page" HorizontalAlignment="Left" Margin="414,530,0,0" VerticalAlignment="Top" Width="107" Height="29"/>
         <Button Content="Next Page" HorizontalAlignment="Left" Margin="875,530,0,0" VerticalAlignment="Top" Width="107" Height="29"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="147,177,0,0" VerticalAlignment="Top" Width="243"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="147,209,0,0" VerticalAlignment="Top" Width="243"/>
+        <ComboBox x:Name="CatCombo"   HorizontalAlignment="Left" Height="26" Margin="147,217,0,0" VerticalAlignment="Top" Width="243" Initialized="CatCombo_Initialized" SelectionChanged="CatCombo_SelectionChanged" />
+        <ComboBox x:Name="SubCombo"  HorizontalAlignment="Left" Height="26" Margin="147,248,0,0" VerticalAlignment="Top" Width="243"  />
         <Button Content="Search" HorizontalAlignment="Left" Height="26" Margin="325,18,0,0" VerticalAlignment="Top" Width="75">
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveBorderColorKey}}"/>
             </Button.Background>
         </Button>
-        <Button Content="Insert Product" HorizontalAlignment="Left" Height="30" Margin="5,85,0,0" VerticalAlignment="Top" Width="125">
+        <Button x:Name="InsertProduct" Content="Insert Product" HorizontalAlignment="Left" Height="30" Margin="5,85,0,0" VerticalAlignment="Top" Width="125" Click="InsertProduct_Click">
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
             </Button.Background>
         </Button>
-        <Button Content="Delete Product" HorizontalAlignment="Left" Height="30" Margin="141,85,0,0" VerticalAlignment="Top" Width="125">
+        <Button x:Name="DeleteProduct"  Content="Delete Product" HorizontalAlignment="Left" Height="30" Margin="141,85,0,0" VerticalAlignment="Top" Width="125" Click="DeleteProduct_Click">
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
             </Button.Background>
         </Button>
-        <Button Content="Update Product" HorizontalAlignment="Left" Height="30" Margin="275,85,0,0" VerticalAlignment="Top" Width="125">
+        <Button x:Name="UpdateProduct"  Content="Update Product" HorizontalAlignment="Left" Height="30" Margin="275,85,0,0" VerticalAlignment="Top" Width="125" Click="UpdateProduct_Click">
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
             </Button.Background>
@@ -47,11 +48,12 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientActiveCaptionColorKey}}"/>
             </Button.Background>
         </Button>
-        <Button Content="Display Selected Product" HorizontalAlignment="Left" Height="32" Margin="571,14,0,0" VerticalAlignment="Top" Width="209">
+        <Button x:Name="DisplayButton"  Content="Display Selected Product" HorizontalAlignment="Left" Height="32" Margin="571,14,0,0" VerticalAlignment="Top" Width="209" Click="DisplayButton_Click">
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientActiveCaptionColorKey}}"/>
             </Button.Background>
         </Button>
+        <TextBox x:Name="productDescText" HorizontalAlignment="Left" Height="26" Margin="147,186,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243"/>
 
     </Grid>
 </Window>

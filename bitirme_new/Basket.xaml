@@ -17,5 +17,6 @@
                         ToolTip="Home" x:Name="btnHome"  RenderTransformOrigin="5.274,-3.012" Height="Auto" Width="Auto" BorderBrush="Red" Foreground="White" Click="BtnHome_Click">
             <materialDesign:PackIcon Kind="Home" Foreground="Black" Width="30" Height="30" />
         </Button>
+       
     </Grid>
 </Window>

@@ -23,6 +23,7 @@
                 <ImageBrush ImageSource="Image/add_basket.png"/>
             </Button.Background>
         </Button>
+        
         <Button x:Name="Remove1"        HorizontalAlignment="Left" Margin="368.082,36,0,0" VerticalAlignment="Top" Width="25" Height="26" RenderTransformOrigin="0.432,1.423" Grid.Column="1" Click="Remove1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Image/remove_basket.png"/>
